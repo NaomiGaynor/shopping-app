@@ -1,14 +1,10 @@
-	/*************************************
-	defines imageview class
-	*************************************/
-
 define([
 	'jquery',
 	'underscore',
 	'backbone',
 	'underscore',
 	'../models/bagitem',
-	'text!templates/productdetail.html'
+	'text!templates/cartitem.html'
 ], function (
 	$,
 	_,
@@ -19,16 +15,12 @@ define([
 ){
 	'use strict';
 	//defining class of view for individual images
-	var ProductDetailView = Backbone.View.extend({
+	var CartItemView = Backbone.View.extend({
 
 		tagName: "li",
 
-		attributes: {
-			class: "list-image"
-		},
-
 		events: {
-			'click .pd__add-to-bag': 'onClick'
+			'click .bag__remove': 'onClick'
 		},
 
 		template: _.template(tpl),
@@ -51,25 +43,13 @@ define([
 		onClick: function(event) {
 			event.preventDefault();
 
-			if (this.hasProducts()) {
-				this.addProductToBag();
-			} else {
-				alert('No Products Remaining');
-			}
+			this.removeProductFromBag();
+			this.render();
 		},
 
-		hasProducts: function() {
-			return this.model.get('quantity') > 0;
-		},
+		removeProductFromBag: function() {
 
-		addProductToBag: function() {
-			var currentQuantity = this.model.get('quantity'),
-				newQuantity = currentQuantity - 1,
-				bagItem;
-
-			this.model.set('quantity', newQuantity);
-			bagItem = new BagItemModel(this.model.attributes);
-			this.bagCollection.add(bagItem);
+			this.collection.remove(this.model);
 			this.render();
 		},
 
@@ -87,6 +67,6 @@ define([
 		}
 
 	});
-	return ProductDetailView;
+	return CartItemView;
 
 });

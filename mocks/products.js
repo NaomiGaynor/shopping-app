@@ -5,6 +5,7 @@ define([], function() {
 			"colour": "Patent Black",
 			"category": "Women’s Footwear",
 			"price": "£99.00",
+			"price_value": 99,
 			"quantity": 5,
 			"image": "http://cdn2.next.co.uk/common/Items/Default/Default/Publications/GC1/shotview-315x472/74/351-088s.jpg"
 		},
@@ -13,6 +14,7 @@ define([], function() {
 			"colour": "Blue",
 			"category": "Women’s Footwear",
 			"price": "£42.00",
+			"price_value": 42,
 			"quantity": 4,
 			"image": "https://assets.burberry.com/is/image/Burberryltd/829a6d1caeab1cc78b0ba8888a9f04016c44eb11.jpg"
 		},
@@ -21,6 +23,7 @@ define([], function() {
 			"colour": "Tan",
 			"category": "Men’s Footwear",
 			"price": "£34.00",
+			"price_value": 34,
 			"quantity": 12,
 			"image": "https://cdna.lystit.com/photos/694a-2014/06/12/dune-brown-benny-leather-driver-saddle-loafers-product-1-20753587-4-795976654-normal.jpeg"
 		},
@@ -29,6 +32,7 @@ define([], function() {
 			"colour": "Red",
 			"category": "Men’s Footwear",
 			"price": "£19.00",
+			"price_value": 19,
 			"quantity": 6,
 			"image": "http://images.asos-media.com/products/adidas-originals-adilette-sliders-288193/6226369-3?$XXL$&wid=513&fit=constrain"
 		},
@@ -37,6 +41,7 @@ define([], function() {
 			"colour": "Blue",
 			"category": "Men’s Footwear",
 			"price": "£19.00",
+			"price_value": 19,
 			"quantity": 0,
 			"image": "http://images.asos-media.com/products/adidas-originals-adilette-slider-flip-flops-g16220/4527779-4?$XXL$&wid=513&fit=constrain"
 		},
@@ -45,6 +50,7 @@ define([], function() {
 			"colour": "Black",
 			"category": "Women’s Casualwear",
 			"price": "£167.00",
+			"price_value": 167,
 			"quantity": 6,
 			"image": "https://assets.burberry.com/is/image/Burberryltd/51beafa67a4be50c8e73a86c13c0637d50a37753.jpg?"
 		},
@@ -54,6 +60,7 @@ define([], function() {
 			"colour": "Red",
 			"category": "Women’s Casualwear",
 			"price": "£30.00",
+			"price_value": 30,
 			"quantity": 5,
 			"image": "http://www.bodenimages.com/productimages/productLarge/16WSPR_WJ043_RED.jpg"
 		},
@@ -62,6 +69,7 @@ define([], function() {
 			"colour": "Grey",
 			"category": "Men’s Casualwear",
 			"price": "£49.99",
+			"price_value": 49.99,
 			"quantity": 9,
 			"image": "http://s1.thcdn.com/productimg/600/600/11230225-1364363527713619.jpg"
 		},
@@ -71,6 +79,7 @@ define([], function() {
 			"category": "Men’s Casualwear",
 			"price": "£49.99",
 			"current_price": "£39.99",
+			"price_value": 39.99,
 			"quantity": 3,
 			"image": "http://johnlewis.scene7.com/is/image/JohnLewis/002711935?$prod_main$"
 		},
@@ -79,6 +88,7 @@ define([], function() {
 			"colour": "Charcoal",
 			"category": "Men’s Formalwear",
 			"price": "£75.00",
+			"price_value": 75,
 			"quantity": 2,
 			"image": "http://www.racinggreen.co.uk/upload/siteimages/ProductNew/RG120739_250_A.jpg"
 		},
@@ -87,6 +97,7 @@ define([], function() {
 			"colour": "Deer",
 			"category": "Men’s Formalwear",
 			"price": "£175.50",
+			"price_value": 175.5,
 			"quantity": 1,
 			"image": "https://s-media-cache-ak0.pinimg.com/736x/9a/b0/56/9ab0562b6a180330f7636582b34b219f.jpg"
 		},
@@ -95,6 +106,7 @@ define([], function() {
 			"colour": "Black",
 			"category": "Women’s Formalwear",
 			"price": "£270.00",
+			"price_value": 270,
 			"quantity": 10,
 			"image": "http://johnlewis.scene7.com/is/image/JohnLewis/002975568?$prod_main$"
 		},
@@ -103,6 +115,7 @@ define([], function() {
 			"colour": "Pink",
 			"category": "Women’s Formalwear",
 			"price": "£540.00",
+			"price_value": 540,
 			"quantity": 5,
 			"image": "http://media.newlookassets.com/i/newlook/392473372/womens/dresses/evening-and-party-dresses/shell-pink-ruched-wrap-front-bodycon-dress/?$plp_3_row$"
 		}

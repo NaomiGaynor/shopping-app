@@ -10,7 +10,7 @@ define([
 	ProductDetailView
 ){
 	//defines class of picture view
-	var PicturesView = Backbone.View.extend({
+	var ProductsView = Backbone.View.extend({
 
 		views: {
 			// pictures views cache
@@ -32,9 +32,10 @@ define([
 		// render function which loops through array of images and  stores json object in a model
 		render: function (){
 			var self = this,
-				productDetailView
-			this.el = this.$el
-			this.delegateEvents()
+				productDetailView;
+
+			this.el = this.$el;
+			this.delegateEvents();
 			this.el.html('');
 
 			if (this.collection) {
@@ -55,5 +56,5 @@ define([
 
 	});
 
-	return PicturesView;
+	return ProductsView;
 });

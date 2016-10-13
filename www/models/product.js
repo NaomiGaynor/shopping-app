@@ -8,8 +8,8 @@ define([
 	Backbone
 ){
 	'use strict';
-		//defines class for model 
-	var ImageModel = Backbone.Model.extend({
+		//defines class for model
+	var ProductModel = Backbone.Model.extend({
 
 		parse: function (response) {
 			// sets fileName to jpg image
@@ -32,5 +32,5 @@ define([
 			return url.split("/").pop();
 		}
 	});
-	return ImageModel;
+	return ProductModel;
 });

@@ -7,14 +7,16 @@ define([
 	'./collections/products',
 	'./collections/bag',
 	'./views/products',
-	'./views/productdetail',
+	'./views/bag',
+	'./views/shoppingcart',
 	'../mocks/products'
 ], function (
 	Backbone,
 	ProductsCollection,
 	BagCollection,
 	ProductsView,
-	ProductView,
+	BagView,
+	ShoppingCartView,
 	mocks
 ) {
 	'use strict';
@@ -48,15 +50,22 @@ define([
 				collection: this.collection,
 				bagCollection: this.bagCollection
 			});
+
+			this.bagView = new BagView();
+
+			this.shoppingCart = new ShoppingCartView({
+				collection: this.bagCollection
+			});
 		},
 
 		//renderGallery function
 		renderGallery: function () {
-			this.$root.html( this.productsView.render().el);
+			this.$root.html( this.productsView.render().el );
+			this.$bag.html( this.bagView.render().el );
 		},
 
 		getBag: function() {
-
+			this.$root.html( this.shoppingCart.render().el );
 		}
 
 	});
