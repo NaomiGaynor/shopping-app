@@ -12,6 +12,7 @@ function (
 	underscore,
 	tpl
 ){
+	'use strict';
 	//defining class of view for individual images
 	var imageView = Backbone.View.extend({
 

@@ -18,6 +18,7 @@ define([
 	ProductView,
 	mocks
 ) {
+	'use strict';
 
 		//defines custom router class
 	var Router = Backbone.Router.extend({

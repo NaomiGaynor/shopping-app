@@ -7,6 +7,7 @@ define([
 ], function (
 	Backbone
 ){
+	'use strict';
 		//defines class for model 
 	var ImageModel = Backbone.Model.extend({
 

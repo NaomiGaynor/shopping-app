@@ -12,6 +12,7 @@ define([
 	Router
 ){
 	'use strict';
+	
 	var DOMReady = function (){
 		URL.routers = {
 			//creating new router, which is defined in url/main.js 
