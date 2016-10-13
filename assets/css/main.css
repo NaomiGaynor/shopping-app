@@ -1,3 +1,14 @@
+.container: {
+	box-sizing: border-box;
+	overflow-x: hidden;
+	width: 100%;
+}
+
+.pd__iamge {
+	height: 200px;
+	width: 200px;
+}
+
 .navbar {
 	width: 100%;
 	position: static;
@@ -22,7 +33,7 @@
 	border-color: #f3735c;
 	color: #f3735c;
   	background-color: white;
-  	border-width: medium; 
+  	border-width: medium;
 }
 
 .canvas {
@@ -30,9 +41,9 @@
 }
 
 .input-medium {
-	
+
 	border: 1px solid rgba(0,0,0,.12);
-	padding-top: 0.5em; 
+	padding-top: 0.5em;
 	padding-bottom: 0.5em;
 }
 

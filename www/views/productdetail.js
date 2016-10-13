@@ -7,12 +7,14 @@ define([
 	'underscore',
 	'backbone',
 	'underscore',
+	'../models/bagitem',
 	'text!templates/productdetail.html'
 ], function (
 	$,
 	_,
 	Backbone,
 	underscore,
+	BagItemModel,
 	tpl
 ){
 	'use strict';
@@ -42,6 +44,7 @@ define([
 			if (this.model) {
 				context = this.model.toJSON();
 			}
+
 			return context;
 		},
 
@@ -60,10 +63,12 @@ define([
 
 		addProductToBag: function() {
 			var currentQuantity = this.model.get('quantity'),
-				newQuantity = currentQuantity - 1;
+				newQuantity = currentQuantity - 1,
+				bagItem;
 
 			this.model.set('quantity', newQuantity);
-			this.bagCollection.push(this.model);
+			bagItem = new BagItemModel(this.model.attributes);
+			this.bagCollection.push(bagItem);
 			this.render();
 		},
 
