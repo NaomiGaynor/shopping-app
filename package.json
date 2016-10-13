@@ -1,0 +1,22 @@
+{
+  "name": "shopping-app",
+  "version": "1.0.0",
+  "description": "Simple shopping app, where user can add and remove items from a virtual shopping bag.",
+  "main": "index.html",
+  "scripts": {
+    "start":"http-server -a localhost -p 8000 -c-1",
+    "test": "public/js/tests/index.html open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NaomiGaynor/shopping-app.git"
+  },
+  "author": "Naomi Gaynor",
+  "bugs": {
+    "url": "https://github.com/NaomiGaynor/shopping-app/issues"
+  },
+  "homepage": "https://github.com/NaomiGaynor/shopping-app",
+  "devDependencies": {
+    "http-server": "^0.8.0"
+  }
+}

@@ -1,0 +1,58 @@
+.navbar {
+	width: 100%;
+	position: static;
+	border-bottom-color: #f3735c;
+	border-bottom-width: medium;
+	top: 0px;
+	z-index: 10;
+  	background-color: white;
+}
+
+.form-search {
+	padding-left: 30px
+}
+
+#searchbox-container {
+	padding-left: 15%;
+  	padding-top: 25px;
+  	padding-bottom: 15px;
+}
+
+.btn {
+	border-color: #f3735c;
+	color: #f3735c;
+  	background-color: white;
+  	border-width: medium; 
+}
+
+.canvas {
+	top: 3em;
+}
+
+.input-medium {
+	
+	border: 1px solid rgba(0,0,0,.12);
+	padding-top: 0.5em; 
+	padding-bottom: 0.5em;
+}
+
+.thumbnails {
+	top: 3em;
+}
+
+.thumbnails li {
+
+	list-style-type: none;
+}
+
+h1{
+	color: #f3735c;
+}
+
+a {
+	color: #f3735c
+}
+
+.thumbnail {
+	box-shadow: none;
+}

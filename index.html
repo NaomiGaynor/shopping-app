@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css">
+	</head> 
+	<body>
+		<div id="container">
+			<div class="navbar">
+				<div class= "navbar-inner">
+					<h1 class="col-sm-6 col-xs-12">GALLERY</h1>
+					<div class="wrapper bag"></div>
+				</div>
+			</div>
+			<div class="wrapper canvas">
+				<ul id= "image-stream"></ul>
+			</div>
+		</div>
+		<!-- Data main attribute informs require.js to load script public/js/main require does not need .js extesion-->
+		<script type="text/javascript" src= "./bower_components/requirejs/require.js" data-main = "./www/app"></script>
+	</body>
+</html>
