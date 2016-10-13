@@ -1,13 +1,16 @@
-/*************************************
-defines imageview class 
-*************************************/
+	/*************************************
+	defines imageview class
+	*************************************/
 
 define([
+	'jquery',
+	'underscore',
 	'backbone',
 	'underscore',
 	'text!templates/productdetail.html'
-], 
-function (
+], function (
+	$,
+	_,
 	Backbone,
 	underscore,
 	tpl
@@ -31,10 +34,11 @@ function (
 		initialize: function(options) {
 			this.bagCollection = options.bagCollection;
 		},
-		
+
+
 		serialize: function() {
 			var context = {};
-			
+
 			if (this.model) {
 				context = this.model.toJSON();
 			}
@@ -42,9 +46,11 @@ function (
 		},
 
 		onClick: function(event) {
-
+			event.preventDefault();
 			if (this.hasProducts()) {
-				this.addProductToBag()
+				this.addProductToBag();
+			} else {
+				alert('No Products Remaining');
 			}
 		},
 
@@ -56,18 +62,21 @@ function (
 			var currentQuantity = this.model.get('quantity'),
 				newQuantity = currentQuantity - 1;
 
-			this.bagCollection.add(this.model);
 			this.model.set('quantity', newQuantity);
+			this.bagCollection.push(this.model);
 			this.render();
 		},
-		
+
 		render: function(){
+
 			if (!this.template) {
 
 				throw Error('BaseView.render(): <template> property is required!');
 			}
 
-			this.$el.html(this.template(this.serialize()));
+			this.el = this.$el;
+			this.delegateEvents(this.events);
+			this.el.html(this.template(this.serialize()));
 
 			return this;
 		}

@@ -4,7 +4,7 @@
   "description": "Simple shopping app, where user can add and remove items from a virtual shopping bag.",
   "main": "index.html",
   "scripts": {
-    "start":"http-server -a localhost -p 8000 -c-1",
+    "start": "http-server -a localhost -p 8000 -c-1",
     "test": "public/js/tests/index.html open"
   },
   "repository": {
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/NaomiGaynor/shopping-app",
   "devDependencies": {
+    "eslint": "^3.7.1",
     "http-server": "^0.8.0"
   }
 }
