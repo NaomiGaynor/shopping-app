@@ -19,31 +19,42 @@ define([
 
 		template: _.template(tpl),
 
-		// appending to all image thumbnails
-		tagName: 'ul',
+		className: 'bag__cart',
+
+		initialize: function() {
+			this.listenTo(this.collection, 'removeItem', this.render);
+		},
 
 		serialize: function() {
 			var total = this.calculateTotal();
+
+			return {
+				total: total
+			};
 		},
 
 		// render function which loops through array of images and  stores json object in a model
 		render: function (){
 			var self = this,
+				renderedCartItems = [],
 				cartItem;
 
-			this.el = this.$el;
 			this.delegateEvents();
 
 			if (this.collection) {
+				this.$el.html(this.template(this.serialize()));
+
 				this.collection.each(function(model){
 					//assigns each picture view to model passsed in as argumnet of function
 					cartItem = new CartItemView({
 						model: model,
 						collection: this.collection
 					});
-					this.$el.append( cartItem.render().el );
+
+					renderedCartItems.push(cartItem.render().el);
 				}, this);
-				this.el.html(this.template(this.serialize()));
+
+				this.$el.find('ul').append( renderedCartItems );
 			}
 
 			return this;
@@ -51,10 +62,11 @@ define([
 
 		calculateTotal: function() {
 			var productPrices = this.getPrices();
+				totalPrice = productPrices.reduce(function(prev, current) {
+					return prev + current;
+				}, 0);
 
-			productPrices.reduce(function(prev, current) {
-				return prev + current;
-			}, 0);
+			return totalPrice;
 		},
 
 		getPrices: function() {

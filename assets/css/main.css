@@ -2,11 +2,16 @@
 	box-sizing: border-box;
 	overflow-x: hidden;
 	width: 100%;
+	padding: 24px;
 }
 
 .pd__media {
 	height: 200px;
 	width: 200px;
+}
+
+.bag__cart ul {
+	list-style-type: none;
 }
 
 .navbar {
@@ -17,16 +22,7 @@
 	top: 0px;
 	z-index: 10;
   	background-color: white;
-}
-
-.form-search {
-	padding-left: 30px
-}
-
-#searchbox-container {
-	padding-left: 15%;
-  	padding-top: 25px;
-  	padding-bottom: 15px;
+  	padding: 0 24px;
 }
 
 .btn {
@@ -38,6 +34,7 @@
 
 .canvas {
 	top: 3em;
+	padding: 24px;
 }
 
 .input-medium {

@@ -25,11 +25,6 @@ define([
 
 		template: _.template(tpl),
 
-		initialize: function(options) {
-			this.bagCollection = options.bagCollection;
-		},
-
-
 		serialize: function() {
 			var context = {};
 
@@ -50,6 +45,7 @@ define([
 		removeProductFromBag: function() {
 
 			this.collection.remove(this.model);
+			this.collection.trigger('removeItem');
 			this.render();
 		},
 
@@ -59,9 +55,8 @@ define([
 				throw Error('BaseView.render(): <template> property is required!');
 			}
 
-			this.el = this.$el;
 			this.delegateEvents(this.events);
-			this.el.html(this.template(this.serialize()));
+			this.$el.html(this.template(this.serialize()));
 
 			return this;
 		}
