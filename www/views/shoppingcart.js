@@ -9,6 +9,7 @@ define([
 	CartItemView,
 	tpl
 ){
+	var VALID_VOUCHER_CODE = 'giveMeDiscount'
 	//defines class of picture view
 	var ShoppingCartView = Backbone.View.extend({
 
@@ -20,6 +21,12 @@ define([
 		template: _.template(tpl),
 
 		className: 'bag__cart',
+
+		hasValidVoucher: false,
+
+		events: {
+			'click .input-group-btn': 'onVoucherInputSubmit'
+		},
 
 		initialize: function() {
 			this.listenTo(this.collection, 'removeItem', this.render);
@@ -82,6 +89,10 @@ define([
 				currentTotal = currentTotal - 10;
 			}
 
+			if (this.hasValidVoucher) {
+				currentTotal = currentTotal - 5;
+			}
+
 			return currentTotal;
 		},
 
@@ -91,6 +102,19 @@ define([
 				hasSmallDiscount = currentTotal > 50;
 
 			return hasBigDiscount || hasSmallDiscount;
+		},
+
+		onVoucherInputSubmit: function(event) {
+			var voucherCodeEntered = this.$el.find('.form-control').val();
+
+			event.preventDefault();
+
+			if (voucherCodeEntered === VALID_VOUCHER_CODE) {
+				this.hasValidVoucher = true;
+				this.render();
+			} else {
+				alert('Whoops! That is not a valid voucher code')
+			}
 		},
 
 		getPrices: function() {

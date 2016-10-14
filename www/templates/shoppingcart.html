@@ -4,6 +4,14 @@
 <p clace="bag__amount">£ <%= total %></p>
 <% if (hasDiscount) { %>
 	<hr>
+	<div class="col-lg-6">
+		<div class="input-group input-medium">
+			<input type="text" class="form-control" placeholder="Add Discount Code">
+			<span class="input-group-btn">
+				<button class="btn btn-default" type="button">Go!</button>
+			</span>
+		</div>
+	</div>
 	<div class="bag__discount">
 		<p class="bag__notification">Discount Applied</p>
 		<h4 class="bag__total">NEW TOTAL</h4>
