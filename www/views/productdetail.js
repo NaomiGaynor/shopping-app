@@ -1,5 +1,5 @@
 	/*************************************
-	defines imageview class
+	defines productdetailview class
 	*************************************/
 
 define([

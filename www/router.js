@@ -21,10 +21,8 @@ define([
 ) {
 	'use strict';
 
-		//defines custom router class
 	var Router = Backbone.Router.extend({
 
-		//specified routes for app
 		routes: {
 			'': 'renderGallery',
 			'bag': 'getBag'

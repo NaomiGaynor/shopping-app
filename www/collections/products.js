@@ -11,6 +11,7 @@ define([
 	Backbone,
 	ProductModel
 ){
+	'use strict';
 
 	var ProductsCollection = Backbone.Collection.extend({
 

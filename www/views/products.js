@@ -1,5 +1,5 @@
 /******************************
-Items view class
+products view class
 ******************************/
 
 define([
@@ -9,18 +9,15 @@ define([
 	Backbone,
 	ProductDetailView
 ){
-	//defines class of picture view
+
 	var ProductsView = Backbone.View.extend({
 
 		views: {
-			// pictures views cache
 			pictures: {}
 		},
 
-		// appending to all image thumbnails
 		tagName: 'ul',
 
-		// setting attributes
 		attributes: {
 			class: 'thumbnails'
 		},
@@ -29,7 +26,6 @@ define([
 			this.bagCollection = options.bagCollection;
 		},
 
-		// render function which loops through array of images and  stores json object in a model
 		render: function (){
 			var self = this,
 				productDetailView;
@@ -40,7 +36,6 @@ define([
 
 			if (this.collection) {
 				this.collection.each(function(model){
-					//assigns each picture view to model passsed in as argumnet of function
 					productDetailView = new ProductDetailView({
 						model: model,
 						bagCollection: this.bagCollection

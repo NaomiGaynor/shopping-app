@@ -1,8 +1,8 @@
 # shopping-app
 
-Simple shopping app where; 
+Simple shopping app where user; 
 
-- User can add and remove items from a virtual shopping bag.
+- can add and remove items from a virtual shopping bag.
 - View the total price
 - Add a gift voucher 
 - See total amounts, with discounts applied

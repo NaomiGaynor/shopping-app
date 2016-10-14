@@ -113,7 +113,7 @@ define([
 				this.hasValidVoucher = true;
 				this.render();
 			} else {
-				alert('Whoops! That is not a valid voucher code')
+				alert('Whoops! That is not a valid voucher code');
 			}
 		},
 
