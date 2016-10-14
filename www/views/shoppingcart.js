@@ -26,10 +26,14 @@ define([
 		},
 
 		serialize: function() {
-			var total = this.calculateTotal();
+			var total = this.calculateTotal(),
+				addDiscount = this.isDiscountApplicable(total),
+				totalWithDiscount = this.calculateTotalWithDiscount(total);
 
 			return {
-				total: total
+				total: total,
+				hasDiscount: addDiscount,
+				totalWithDiscount: totalWithDiscount
 			};
 		},
 
@@ -67,6 +71,26 @@ define([
 				}, 0);
 
 			return totalPrice;
+		},
+
+		calculateTotalWithDiscount: function(currentTotal) {
+			var hasBoughtFootwear = this.collection.hasBoughtFootwear();
+
+			if (currentTotal > 75 && hasBoughtFootwear) {
+				currentTotal = currentTotal - 15;
+			} else if (currentTotal > 50) {
+				currentTotal = currentTotal - 10;
+			}
+
+			return currentTotal;
+		},
+
+		isDiscountApplicable: function(currentTotal) {
+			var hasBoughtFootwear = this.collection.hasBoughtFootwear(),
+				hasBigDiscount = hasBoughtFootwear && currentTotal > 75,
+				hasSmallDiscount = currentTotal > 50;
+
+			return hasBigDiscount || hasSmallDiscount;
 		},
 
 		getPrices: function() {

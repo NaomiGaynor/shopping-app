@@ -1,4 +1,12 @@
 <ul></ul>
 <hr>
 <h3 class="bag__total">TOTAL</h3>
-<p clace="bag_amount">£ <%= total %></p>
+<p clace="bag__amount">£ <%= total %></p>
+<% if (hasDiscount) { %>
+	<hr>
+	<div class="bag__discount">
+		<p class="bag__notification">Discount Applied</p>
+		<h4 class="bag__total">NEW TOTAL</h4>
+		<p class="bag__amount">£ <%= totalWithDiscount %></p>
+	</div>
+<% } %>
