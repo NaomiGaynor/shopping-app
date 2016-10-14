@@ -5,13 +5,24 @@
 	padding: 24px;
 }
 
+.pd__wrapper {
+	margin-bottom: 24px;
+}
+
 .pd__media {
 	height: 200px;
 	width: 200px;
 }
 
+.bag__btn {
+	position: absolute;
+	top: 20px;
+	right: 24px;
+}
+
 .bag__cart ul {
 	list-style-type: none;
+	padding: 0;
 }
 
 .navbar {
