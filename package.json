@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/NaomiGaynor/shopping-app",
   "devDependencies": {
-    "eslint": "^3.7.1",
+    "eslint": "^6.6.0",
     "http-server": "^0.8.0"
   }
 }
